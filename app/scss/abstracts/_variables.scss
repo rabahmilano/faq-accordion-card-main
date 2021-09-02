@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+$blueDesaturatedDark: hsl(238, 29%, 16%);
+$blueGrayishVeryDark: hsl(237, 12%, 33%);
+$blueGrayishDark: hsl(240, 6%, 50%);
+$blueGrayishLight: hsl(240, 5%, 91%);
+$redSoft: hsl(14, 88%, 65%);
+
+/// Background gradient
+$violetSoft: hsl(273, 75%, 66%);
+$blueSoft: hsl(240, 73%, 65%);
+
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(to bottom, $violetSoft, $blueSoft);
+  font-family: 'Kumbh Sans', sans-serif;
+  padding: 9.25rem 0 5.3rem;
+
+  @include breakpoint-up(xlarge) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+.main {
+  width: 87%;
+  max-width: 500px;
+  background: white;
+  margin: 0 auto;
+  padding: 0 1.4rem 1rem;
+  border-radius: 1.5rem/1.25rem;
+  box-shadow: 10px 30px 40px rgba(black, 0.3);
+
+  &__image {
+    background: url("../../images/bg-pattern-mobile.svg") top center no-repeat;
+    height: 140px;
+
+    &--picture {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(calc(-50% - 15px)) translateY(calc(50% - 10px));
+    }
+
+    &--secondary {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding-bottom: 3rem;
+
+    &--title {
+      text-align: center;
+    }
+  }
+
+  @include breakpoint-up(xlarge) {
+    max-width: 920px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+
+    &__image {
+      height: 100%;
+      background: url("../../images/bg-pattern-desktop.svg") no-repeat;
+      background-position: right -10% bottom -180px;
+      background-size: 220%;
+      overflow: hidden;
+
+      &--picture {
+        left: -18%;
+        bottom: 10%;
+        transform: translateX(0) translateY(0);
+      }
+
+      &--secondary {
+        display: block;
+        position: absolute;
+        left: -92px;
+        bottom: 6rem;
+      }
+    }
+
+    &__content {
+      max-width: 380px;
+      padding: 4.5rem 0;
+
+      &--title {
+        font-size: 1.5rem;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+}

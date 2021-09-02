@@ -1,0 +1,73 @@
+.box {
+  border-bottom: 1px solid $blueGrayishLight;
+
+  &__question {
+    font-size: 13px;
+
+    &--btn {
+      display: grid;
+      grid-template-columns: 1fr 30px;
+      cursor: pointer;
+
+      &:hover {
+        color: $redSoft;
+      }
+    }
+
+    &--btncontrol {
+      display: none;
+
+      &:checked+.box__question .fa-angle-up,
+      &:checked~.box__answer {
+        display: block;
+      }
+
+      &:checked+.box__question .fa-angle-down {
+        display: none;
+      }
+
+      &:checked+.box__question>label:not(i) {
+        color: $blueDesaturatedDark;
+        font-weight: 700;
+      }
+    }
+
+    & label {
+      color: $blueGrayishVeryDark;
+      padding: 1.1rem 0;
+      transition: color .3s ease-in-out;
+    }
+  }
+
+  & i {
+    color: $redSoft;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.fa-angle-up {
+      display: none;
+    }
+  }
+
+  &__answer {
+    color: $blueGrayishDark;
+    font-size: 12px;
+    line-height: 1.3;
+    padding-bottom: 1.25rem;
+    width: 95%;
+    display: none;
+  }
+
+  @include breakpoint-up(medium) {
+    &__question {
+      font-size: 16px;
+    }
+
+    &__answer {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+}
